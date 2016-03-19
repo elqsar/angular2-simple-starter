@@ -1,0 +1,46 @@
+{
+  "games": [
+    {
+      "id": 1,
+      "name": "Bloodborne",
+      "year": 2015,
+      "platforms": [
+        {
+          "name": "Play Station"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Dark Souls 2",
+      "year": 2014,
+      "platforms": [
+        {
+          "name": "XBOX"
+        },
+        {
+          "name": "Play Station"
+        },
+        {
+          "name": "PC"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "FIFA 16",
+      "year": 2015,
+      "platforms": [
+        {
+          "name": "XBOX"
+        },
+        {
+          "name": "Play Station"
+        },
+        {
+          "name": "PC"
+        }
+      ]
+    }
+  ]
+}
