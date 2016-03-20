@@ -1,5 +1,5 @@
 import {Game} from './game';
 
-export interface GameStore {
+export interface AppStore {
     games: Array<Game>
 }

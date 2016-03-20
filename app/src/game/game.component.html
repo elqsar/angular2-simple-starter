@@ -1,0 +1,8 @@
+<div class="mdl-grid items">
+    <div class="mdl-cell mdl-cell--8-col">
+        <games-list
+                [games]="games | async"
+                (deleted)="deleteGame($event)">
+        </games-list>
+    </div>
+</div>
