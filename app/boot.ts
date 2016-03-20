@@ -14,11 +14,12 @@ import {
 
 import {provideStore} from '@ngrx/store';
 import {App} from './src/app';
+import {games} from './src/game/store/game.store';
 
 bootstrap(App, [
   HTTP_PROVIDERS,
   ROUTER_PROVIDERS,
   provide(LocationStrategy, {useClass: HashLocationStrategy}),
-  provideStore({}),
+  provideStore({games}),
   instrumentStore()
 ]);
