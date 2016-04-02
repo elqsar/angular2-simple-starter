@@ -26,7 +26,15 @@ export class Games implements OnInit {
         this.gamesService.fetchGames();
     }
 
+    createGame(game: Game) {
+        this.gamesService.createGame(game);
+    }
+    
+    updateGame(game: Game) {
+        this.gamesService.updateGame(game);
+    }
+
     deleteGame(game: Game) {
-        console.log('Delete game: ' + game);
+        this.gamesService.deleteGame(game);
     }
 }

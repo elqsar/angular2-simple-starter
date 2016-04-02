@@ -25,4 +25,30 @@ export class GamesService {
                 error => console.log('Error: ' + error)
             );
     }
+
+    createGame(game: Game) {
+        this.http.post(`${BASE_URL}`, JSON.stringify(game), HEADER)
+            .map(res => res.json())
+            .map(payload => ({ type: 'CREATE_GAME', payload: payload }))
+            .subscribe(
+                action => this.store.dispatch(action),
+                error => console.log('Error: ' + error)
+            );
+    }
+
+    updateGame(game: Game) {
+        this.http.put(`${BASE_URL}/${game.id}`, JSON.stringify(game), HEADER)
+            .subscribe(
+                action => this.store.dispatch({ type: 'UPDATE_GAME', payload: game }),
+                error => console.log('Error: ' + error)
+            );
+    }
+
+    deleteGame(game: Game) {
+        this.http.delete(`${BASE_URL}/${game.id}`)
+            .subscribe(
+                action => this.store.dispatch({ type: 'DELETE_GAME', payload: game }),
+                error => console.log('Error: ' + error)
+            );
+    }
 }
